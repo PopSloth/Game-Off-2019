@@ -6,7 +6,9 @@ public class Carrot : MonoBehaviour
 {
     public WeightChange _WeightChange;
     public float newWeight;
+    private float oldWeight;
     public float duration = 5.0f;
+
 
     private float currentTime = 0f;
     private float startingTime = 5f;
@@ -35,6 +37,7 @@ public class Carrot : MonoBehaviour
 
     IEnumerator PickUp(Collider2D player)
     {
+        oldWeight = _WeightChange.GetWeight();
         _WeightChange.SetWeight(newWeight);
 
         GetComponent<Collider2D>().enabled = false;
@@ -42,7 +45,7 @@ public class Carrot : MonoBehaviour
 
         yield return new WaitForSeconds(duration);
 
-        _WeightChange.SetWeight(50f);
+        _WeightChange.SetWeight(oldWeight);
         Destroy(gameObject);
     }
 }

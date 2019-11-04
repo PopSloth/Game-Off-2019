@@ -21,4 +21,8 @@ public class WeightChange : MonoBehaviour
     {
         gameObject.GetComponent<Rigidbody2D>().mass = newWeight;
     }
+    public float GetWeight()
+    {
+        return gameObject.GetComponent<Rigidbody2D>().mass;
+    }
 }
