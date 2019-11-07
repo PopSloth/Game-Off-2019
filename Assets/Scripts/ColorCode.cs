@@ -11,7 +11,8 @@ public class ColorCode : MonoBehaviour
     private float startingTime = 5f;
     private bool danger = false;
     public string damageTag;
-
+    public GameObject myPrefab;
+    public GameObject spawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +48,22 @@ public class ColorCode : MonoBehaviour
         if (collision.gameObject.tag.Equals(danger.ToString()))
         {
             Destroy(gameObject);
-        }else if (collision.gameObject.tag.Equals(danger.ToString()))
+            Instantiate(myPrefab, spawnPoint.transform.position, Quaternion.identity);
+
+        }
+        else if (collision.gameObject.tag.Equals(danger.ToString()))
         {
             Destroy(gameObject);
+            Instantiate(myPrefab, spawnPoint.transform.position, Quaternion.identity);
+        }
+    }
+
+    public void KillPlayer(GameObject player, string tag)
+    {
+        if (tag.Equals(danger.ToString()))
+        {
+            Instantiate(myPrefab, spawnPoint.transform.position, Quaternion.identity);
+            Destroy(player);
         }
     }
 }

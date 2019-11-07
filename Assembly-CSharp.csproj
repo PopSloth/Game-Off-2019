@@ -65,10 +65,13 @@
     <Compile Include="Assets\Scripts\Carrot.cs" />
     <Compile Include="Assets\Scripts\chainAttach.cs" />
     <Compile Include="Assets\Scripts\ColorCode.cs" />
+    <Compile Include="Assets\Scripts\ColorCodePlatform.cs" />
     <Compile Include="Assets\Scripts\Elevator.cs" />
     <Compile Include="Assets\Scripts\LedgeAttach.cs" />
     <Compile Include="Assets\Scripts\LedgeParent.cs" />
     <Compile Include="Assets\Scripts\MoveBunny.cs" />
+    <Compile Include="Assets\Scripts\SpikeScript.cs" />
+    <Compile Include="Assets\Scripts\UnParent.cs" />
     <Compile Include="Assets\Scripts\WeightChange.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity Projects/Leaping with Boundaries/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

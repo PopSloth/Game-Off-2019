@@ -5,9 +5,13 @@ using UnityEngine;
 public class Carrot : MonoBehaviour
 {
     public WeightChange _WeightChange;
+    public WeightChange _WeightChange2;
     public float newWeight;
-    private float oldWeight;
+    public float breakValue;
+    public float gravityValue;
     public float duration = 5.0f;
+
+    private float oldWeight;
 
 
     private float currentTime = 0f;
@@ -39,6 +43,8 @@ public class Carrot : MonoBehaviour
     {
         oldWeight = _WeightChange.GetWeight();
         _WeightChange.SetWeight(newWeight);
+        _WeightChange.SetBreak(breakValue);
+        _WeightChange2.SetGravity(gravityValue);
 
         GetComponent<Collider2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;

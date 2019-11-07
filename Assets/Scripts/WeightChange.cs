@@ -21,8 +21,18 @@ public class WeightChange : MonoBehaviour
     {
         gameObject.GetComponent<Rigidbody2D>().mass = newWeight;
     }
+
+    public void SetBreak(float newBreak)
+    {
+        gameObject.GetComponent<HingeJoint2D>().breakForce = newBreak;
+        gameObject.GetComponent<HingeJoint2D>().breakTorque = newBreak;
+    }
     public float GetWeight()
     {
         return gameObject.GetComponent<Rigidbody2D>().mass;
+    }
+    public void SetGravity(float newGravity)
+    {
+        gameObject.GetComponent<Rigidbody2D>().gravityScale = newGravity;
     }
 }
