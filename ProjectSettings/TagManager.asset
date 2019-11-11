@@ -7,6 +7,11 @@ TagManager:
   - True
   - False
   - Bunny
+  - Weight
+  - Chain
+  - ChainFirst
+  - CarrotKey
+  - FreePlayer
   layers:
   - Default
   - TransparentFX

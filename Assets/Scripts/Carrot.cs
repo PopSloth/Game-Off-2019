@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Carrot : MonoBehaviour
 {
-    public WeightChange _WeightChange;
-    public WeightChange _WeightChange2;
+    public GameObject spawnPointFree;
+    public GameObject freePlayer;
+    private WeightChange _WeightChange;
+    private WeightChange _WeightChange2;
+    public ColorCode _ColorCode;
     public float newWeight;
     public float breakValue;
     public float gravityValue;
     public float duration = 5.0f;
+    private GameObject[] chainFirst;
+    private GameObject chainTemp;
 
     private float oldWeight;
 
@@ -33,14 +38,20 @@ public class Carrot : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-
             StartCoroutine(PickUp(collision));
 
         }
     }
 
-    IEnumerator PickUp(Collider2D player)
+    IEnumerator PickUp(Collider2D player) //find first link of chain and change it's break limit also changes to new spawnpoint and new prefab to unchained player
     {
+        _ColorCode.SetSpawnPoint(spawnPointFree);
+        _ColorCode.SetPlayerPrefab(freePlayer);
+        chainFirst = GameObject.FindGameObjectsWithTag("ChainFirst");
+        chainTemp = (GameObject)chainFirst.GetValue(0);
+        _WeightChange = chainTemp.GetComponent<WeightChange>();
+        _WeightChange2 = chainTemp.GetComponent<WeightChange>();
+
         oldWeight = _WeightChange.GetWeight();
         _WeightChange.SetWeight(newWeight);
         _WeightChange.SetBreak(breakValue);
@@ -53,5 +64,11 @@ public class Carrot : MonoBehaviour
 
         _WeightChange.SetWeight(oldWeight);
         Destroy(gameObject);
+    }
+
+    public void SetChain(GameObject chain)
+    {
+        _WeightChange = chain.GetComponent<WeightChange>();
+        _WeightChange2 = chain.GetComponent<WeightChange>();
     }
 }
