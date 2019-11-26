@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ColorCode : MonoBehaviour
 {
+    public AudioSource death;
     public Text uiText;
     public Text uiText2;
     private float currentTime = 0f;
@@ -121,6 +122,7 @@ public class ColorCode : MonoBehaviour
 
         if (player.gameObject.tag.Equals("Player"))
         {
+            death.Play();
             chainFirst = GameObject.FindGameObjectsWithTag("ChainFirst");
             Destroy(chainFirst[0]);
             chains = GameObject.FindGameObjectsWithTag("Chain");

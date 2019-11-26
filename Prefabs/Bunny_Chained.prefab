@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4742860459344594547}
   m_LocalRotation: {x: -0, y: -0, z: 0.99999744, w: 0.0022798427}
   m_LocalPosition: {x: -0.5633385, y: -1.1079979, z: 0}
-  m_LocalScale: {x: 6.6666975, y: 3.9999883, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742860460702824169}
   m_RootOrder: 1
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 89988714173aa5d4ba5b2b847ad1c15c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,8 +124,8 @@ HingeJoint2D:
   m_BreakForce: 999999
   m_BreakTorque: 999999
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -0.06, y: 0}
-  m_ConnectedAnchor: {x: -0.012750435, y: -0.03618809}
+  m_Anchor: {x: -0.417202, y: 0.017276574}
+  m_ConnectedAnchor: {x: -0.14620937, y: -1.1275558}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 60
@@ -170,11 +170,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4742860460310381198}
   - component: {fileID: 4742860460310381197}
-  - component: {fileID: 4742860460310381196}
   - component: {fileID: 4742860460310381195}
   - component: {fileID: 4742860460310381194}
   - component: {fileID: 4742860460310381193}
   - component: {fileID: 4742860460310381192}
+  - component: {fileID: 2095569528029936658}
   m_Layer: 0
   m_Name: Weight
   m_TagString: Weight
@@ -189,13 +189,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4742860460310381191}
-  m_LocalRotation: {x: -0, y: -0, z: 0.99999744, w: 0.0022798427}
-  m_LocalPosition: {x: -5.283333, y: -1.0800018, z: 0}
-  m_LocalScale: {x: 10.000048, y: 11.999966, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.286, y: -1.085, z: 0}
+  m_LocalScale: {x: 0.8108, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742860460702824169}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 179.73901}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4742860460310381197
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -233,8 +233,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: b45639bfffadb6746afc5a12c555b092, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -245,22 +245,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4742860460310381196
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4742860460310381191}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.082
 --- !u!50 &4742860460310381195
 Rigidbody2D:
   serializedVersion: 4
@@ -296,7 +280,7 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0.0000000016447403, y: -0.000000006956342}
+  m_Anchor: {x: -0.0000005623815, y: 0}
   m_ConnectedAnchor: {x: 0.07300035, y: 0.00016569842}
   m_UseMotor: 0
   m_Motor:
@@ -330,6 +314,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc6eea02335b3841aca3f9a11884bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &2095569528029936658
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742860460310381191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.022020623, y: 0.042842865}
+  serializedVersion: 2
+  m_Radius: 0.93376726
 --- !u!1 &4742860460463920442
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +359,7 @@ Transform:
   m_GameObject: {fileID: 4742860460463920442}
   m_LocalRotation: {x: -0, y: -0, z: 0.99999744, w: 0.0022798427}
   m_LocalPosition: {x: -2.2383401, y: -1.1000023, z: 0}
-  m_LocalScale: {x: 6.6666975, y: 3.9999883, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742860460702824169}
   m_RootOrder: 3
@@ -401,8 +401,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 89988714173aa5d4ba5b2b847ad1c15c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -448,8 +448,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -0.06, y: 0}
-  m_ConnectedAnchor: {x: 0.06718138, y: 0.000000101863385}
+  m_Anchor: {x: -0.4240802, y: 0.01999143}
+  m_ConnectedAnchor: {x: 0.4259335, y: 0.020647557}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 60
@@ -499,7 +499,7 @@ Transform:
   m_GameObject: {fileID: 4742860460506022674}
   m_LocalRotation: {x: -0, y: -0, z: 0.99999744, w: 0.0022798427}
   m_LocalPosition: {x: -3.9450037, y: -1.0880013, z: 0}
-  m_LocalScale: {x: 6.6666975, y: 3.9999883, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742860460702824169}
   m_RootOrder: 5
@@ -541,8 +541,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 89988714173aa5d4ba5b2b847ad1c15c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -588,8 +588,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -0.06, y: 0}
-  m_ConnectedAnchor: {x: 0.06718138, y: 0.000000101863385}
+  m_Anchor: {x: -0.41721925, y: 0.020032706}
+  m_ConnectedAnchor: {x: 0.43278748, y: 0.020688817}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 60
@@ -639,7 +639,7 @@ Transform:
   m_GameObject: {fileID: 4742860460660651207}
   m_LocalRotation: {x: -0, y: -0, z: 0.99999744, w: 0.0022798427}
   m_LocalPosition: {x: -1.3883367, y: -1.1040001, z: 0}
-  m_LocalScale: {x: 6.6666975, y: 3.9999883, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742860460702824169}
   m_RootOrder: 2
@@ -681,8 +681,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 89988714173aa5d4ba5b2b847ad1c15c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -728,8 +728,8 @@ HingeJoint2D:
   m_BreakForce: 999999
   m_BreakTorque: 999999
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -0.06, y: 0}
-  m_ConnectedAnchor: {x: 0.063750625, y: 0.00012836739}
+  m_Anchor: {x: -0.3874383, y: 0.017440712}
+  m_ConnectedAnchor: {x: 0.43756625, y: 0.01795951}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 60
@@ -764,6 +764,8 @@ GameObject:
   - component: {fileID: 4742860460702824172}
   - component: {fileID: 4742860460702824171}
   - component: {fileID: 4742860460702824170}
+  - component: {fileID: 5671963108812072916}
+  - component: {fileID: 6249902835642762768}
   m_Layer: 0
   m_Name: Bunny_Chained
   m_TagString: Player
@@ -830,7 +832,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: fed83602d6feabd4ea923299bc5b8a2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -913,6 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1028863706549714a9db37dfe9e3d9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump: {fileID: 6249902835642762768}
   speed: 15
   jumpForce: 20
   isGrounded: 0
@@ -923,6 +926,121 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   jumpTime: 0.35
+--- !u!95 &5671963108812072916
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742860460702824168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3b456e1a68587b846939c8116f8057cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &6249902835642762768
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742860460702824168}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1dd13cdad883e704e8b05b4b53123e30, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4742860460858317467
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +1070,7 @@ Transform:
   m_GameObject: {fileID: 4742860460858317467}
   m_LocalRotation: {x: -0, y: -0, z: 0.99999744, w: 0.0022798427}
   m_LocalPosition: {x: -4.7966666, y: -1.0840034, z: 0}
-  m_LocalScale: {x: 6.6666975, y: 3.9999883, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742860460702824169}
   m_RootOrder: 6
@@ -994,8 +1112,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 89988714173aa5d4ba5b2b847ad1c15c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1041,8 +1159,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -0.06, y: 0}
-  m_ConnectedAnchor: {x: 0.06718138, y: 0.000000101863385}
+  m_Anchor: {x: -0.42867818, y: 0.025453983}
+  m_ConnectedAnchor: {x: 0.42299113, y: 0.02611774}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 60
@@ -1087,7 +1205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4742860460976348858}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -1.15, z: 0}
+  m_LocalPosition: {x: -0.011, y: -1.355, z: 0}
   m_LocalScale: {x: 1.6666665, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4742860460702824169}
@@ -1122,7 +1240,7 @@ Transform:
   m_GameObject: {fileID: 4742860460984472357}
   m_LocalRotation: {x: -0, y: -0, z: 0.99999744, w: 0.0022798427}
   m_LocalPosition: {x: -3.0950067, y: -1.091999, z: 0}
-  m_LocalScale: {x: 6.6666975, y: 3.9999883, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742860460702824169}
   m_RootOrder: 4
@@ -1164,8 +1282,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 89988714173aa5d4ba5b2b847ad1c15c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1211,8 +1329,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -0.06, y: 0}
-  m_ConnectedAnchor: {x: 0.06718138, y: 0.000000101863385}
+  m_Anchor: {x: -0.42865643, y: 0.019961724}
+  m_ConnectedAnchor: {x: 0.42803302, y: 0.016650567}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 60

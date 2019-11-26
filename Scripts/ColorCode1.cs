@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ColorCode1 : MonoBehaviour
 {
+    public AudioSource death;
+
     private bool danger = false;
     public string damageTag;
     public GameObject myPrefab;
@@ -98,9 +100,10 @@ public class ColorCode1 : MonoBehaviour
 
     public void KillPlayerAlways(GameObject player, string tag) // gets called in objects that kill player, also destroys the chain and spawns player at spawpoint
     {
-
+        death.Play();
         if (player.gameObject.tag.Equals("Player"))
         {
+            print("Does this happen?");
             chainFirst = GameObject.FindGameObjectsWithTag("ChainFirst");
             Destroy(chainFirst[0]);
             chains = GameObject.FindGameObjectsWithTag("Chain");
@@ -112,7 +115,7 @@ public class ColorCode1 : MonoBehaviour
                 Destroy(chains[i]);
             }
         }
-            
+            death.Play();
             Destroy(player);
             Instantiate(myPrefab, spawnPoint.transform.position, Quaternion.identity);
             newWeight = GameObject.FindGameObjectsWithTag("Weight");

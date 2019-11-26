@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveBunny : MonoBehaviour
 {
+    public AudioSource jump;
     public float speed = 10.0f;
     public float jumpForce = 1.0f;
     private Rigidbody2D rb;
@@ -40,6 +41,8 @@ public class MoveBunny : MonoBehaviour
         }
         if(isGrounded ==true && Input.GetKeyDown(KeyCode.Space))
         {
+            //this.GetComponent<Animator>().SetTrigger("jump");
+            jump.Play();
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
@@ -50,6 +53,8 @@ public class MoveBunny : MonoBehaviour
             {
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
+
+
             }
         }
         if (Input.GetKeyUp(KeyCode.Space))

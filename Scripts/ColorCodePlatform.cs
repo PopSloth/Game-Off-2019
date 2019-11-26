@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColorCodePlatform : MonoBehaviour
 {
-
+    public Animator transitionAnim;
     public ColorCode colorTest;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,7 @@ public class ColorCodePlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("FreePlayer"))
         {
+            transitionAnim.SetTrigger("death");
             print("Platform Text: " + collision.gameObject.name + "    " + collision.gameObject.tag);
             colorTest.KillPlayer(collision.gameObject, gameObject.tag);
         }

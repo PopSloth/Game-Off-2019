@@ -27,14 +27,14 @@ public class LedgeParent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("Player"))
+        if (collision.transform.CompareTag("Player") || collision.transform.CompareTag("FreePlayer"))
         {
             collision.transform.SetParent(transform);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("Player"))
+        if (collision.transform.CompareTag("Player") || collision.transform.CompareTag("FreePlayer"))
         {
             collision.transform.SetParent(null);
         }

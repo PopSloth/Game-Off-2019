@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpikeScript : MonoBehaviour
 {
     public ColorCode _colordCode;
+    public Animator transitionAnim;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +21,9 @@ public class SpikeScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(collision.gameObject.tag);
         if(collision.CompareTag("Player") || collision.CompareTag("FreePlayer"))
         {
-            print("Player Touch");
+            transitionAnim.SetTrigger("death");
             _colordCode.KillPlayerAlways(collision.gameObject, collision.transform.tag);
           //  Destroy(collision.gameObject);
         }
